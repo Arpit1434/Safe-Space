@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "488704250316",
+    "project_id": "christ-university-safe-space",
+    "storage_bucket": "christ-university-safe-space.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488704250316:android:5a061b1f023d3042ba4d69",
+        "android_client_info": {
+          "package_name": "com.christuniversity.safespace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488704250316-mjke7t1e9t6uskt17t1g11ii53q5uk9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE3adqZWGUxx8F2MnicN4xYVcHuLucX1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488704250316-mjke7t1e9t6uskt17t1g11ii53q5uk9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
