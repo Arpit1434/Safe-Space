@@ -6,6 +6,7 @@ import 'package:safespace/services/auth.dart';
 import 'package:safespace/shared/loading.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             home: Text('Error'),
           );
         }
@@ -27,11 +29,13 @@ class MyApp extends StatelessWidget {
             initialData: null,
             value: AuthService().user,
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
               home: Wrapper(),
             ),
           );
         }
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: Loading(),
         );
       },
