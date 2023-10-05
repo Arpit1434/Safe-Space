@@ -8,9 +8,11 @@ class DatabaseService {
 
   final CollectionReference userCollection = FirebaseFirestore.instance.collection('user');
 
-  Future updateUserData(String name) async {
+  Future updateUserData(String name, String email) async {
     return await userCollection.doc(uid).set({
-      'name': name
+      'uid': uid,
+      'name': name,
+      'email': email
     });
   }
 
@@ -22,7 +24,7 @@ class DatabaseService {
   }
 
   Stream<List<Chat>> get chats {
-    return userCollection.snapshots().map(_chatListFromSnapshot);
+    return userCollection.where("uid", isNotEqualTo: uid).snapshots().map(_chatListFromSnapshot);
   }
 
 }

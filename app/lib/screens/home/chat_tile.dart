@@ -15,9 +15,7 @@ class ChatTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4.0,),
           child: ListTile(
-            onTap: () {
-              
-            },
+            onTap: () {},
             leading: Initicon(
               text: chat.name,
               elevation: 1.0,
