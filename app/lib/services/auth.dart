@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:safespace/models/safespace_user.dart';
 import 'package:safespace/services/database.dart';
 
-class AuthService {
+class AuthService extends ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   SafeSpaceUser? _userFromFirebase(User? user) {

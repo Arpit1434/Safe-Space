@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         if (snapshot.hasError) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: Text('Error'),
+            home: Text('Some error has occured'),
           );
         }
         if (snapshot.connectionState == ConnectionState.done) {

@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:safespace/models/chat.dart';
 
-class DatabaseService {
+class DatabaseService extends ChangeNotifier {
 
   final String? uid;
   DatabaseService({ required this.uid });
@@ -19,7 +20,7 @@ class DatabaseService {
   List<Chat> _chatListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
       dynamic data = doc.data()! as Map<String, dynamic>;
-      return Chat(name: data['name']);
+      return Chat(uid: data['uid'], name: data['name']);
     }).toList();
   }
 

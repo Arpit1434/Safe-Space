@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safespace/models/chat.dart';
 import 'package:flutter_initicon/flutter_initicon.dart';
+import 'package:safespace/screens/home/chat_page.dart';
 
 class ChatTile extends StatelessWidget {
   final Chat chat;
@@ -15,7 +16,12 @@ class ChatTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4.0,),
           child: ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ChatPage(
+                receiverUserID: chat.uid,
+                receiverUserName: chat.name
+              )));
+            },
             leading: Initicon(
               text: chat.name,
               elevation: 1.0,
