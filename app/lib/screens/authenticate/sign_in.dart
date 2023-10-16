@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:safespace/components/my_button.dart';
 import 'package:safespace/components/my_text_form_field.dart';
 import 'package:safespace/services/auth.dart';
-import 'package:safespace/shared/constants.dart';
 import 'package:safespace/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
